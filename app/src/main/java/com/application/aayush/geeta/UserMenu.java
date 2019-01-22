@@ -252,7 +252,7 @@ public class UserMenu extends AppCompatActivity
 //            read.setVisibility(View.GONE);
             edit.setVisibility(View.VISIBLE);
             //Diary diary = diaryDatabaseHandler.getContent(Integer.parseInt(chapter.getText().toString()));
-            Diary diary = diaryDatabaseHandler.getContent(chapter_id);
+            //Diary diary = diaryDatabaseHandler.getContent(chapter_id);
 //            final String data = diary.getDiary_details();
 //            note.setText(data);
             //editText.setInputType(InputType.TYPE_NULL);
