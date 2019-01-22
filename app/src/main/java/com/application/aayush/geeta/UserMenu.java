@@ -185,7 +185,7 @@ public class UserMenu extends AppCompatActivity
         note.setTypeface(customFont2);
         flag = sharedPreferences1.getInt("flag",defaultValue);
         count = db.userCount();
-        shlokas = db.getsholka(Integer.valueOf(sharedPreferences.getString("current_chapter",default_chapter)));
+        shlokas = db.getsholka(Integer.valueOf(sharedPreferences4.getString("current_chapter",default_chapter)));
 //        Shlokas shlokas = db.getsholka(Integer.parseInt(sharedPreferences4.getString("current_chapter",default_chapter)));
         id = shlokas.getId();
         title = "Chapter "+String.valueOf(id);
@@ -253,8 +253,8 @@ public class UserMenu extends AppCompatActivity
             edit.setVisibility(View.VISIBLE);
             //Diary diary = diaryDatabaseHandler.getContent(Integer.parseInt(chapter.getText().toString()));
             Diary diary = diaryDatabaseHandler.getContent(chapter_id);
-            final String data = diary.getDiary_details();
-            note.setText(data);
+//            final String data = diary.getDiary_details();
+//            note.setText(data);
             //editText.setInputType(InputType.TYPE_NULL);
             diary_no.setText(chapter.getText().toString());
         }

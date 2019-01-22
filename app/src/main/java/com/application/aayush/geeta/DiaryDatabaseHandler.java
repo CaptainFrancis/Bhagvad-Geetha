@@ -67,14 +67,14 @@ public class DiaryDatabaseHandler extends SQLiteOpenHelper {
                 TABLE_DIARY,
                 new String[]{KEY_CHAPTER_ID,KEY_DIARY_DETAIL},
                 KEY_CHAPTER_ID +"= ?",new String[]{String.valueOf(id)},null,null,null);
-        if(cursor == null) {
-            return null;
+        if(cursor != null&&cursor.moveToFirst()) {
+            diary = new Diary(Integer.parseInt(cursor.getString(0)),cursor.getString(1));
+            cursor.close();
+            db.close();
+            return diary;
         }
-            cursor.moveToNext();
-        diary = new Diary(Integer.parseInt(cursor.getString(0)),cursor.getString(1));
-        cursor.close();
-        db.close();
-        return diary;
+
+        return null;
     }
     public int UpdateContent(Diary diary){
         SQLiteDatabase db = this.getWritableDatabase();
