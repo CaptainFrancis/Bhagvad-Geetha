@@ -16,6 +16,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
+import android.support.v4.content.ContextCompat;
 import android.text.InputType;
 import android.util.Log;
 import android.util.TypedValue;
@@ -69,6 +70,7 @@ import java.util.List;
 import java.util.Locale;
 
 import static java.lang.System.out;
+import static java.security.AccessController.getContext;
 
 public class UserMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
@@ -495,7 +497,7 @@ public class UserMenu extends AppCompatActivity
                 public void onClick(View v) {
                     AlertDialog.Builder alertDialogBuilder1 = new AlertDialog.Builder(UserMenu.this);
                     View dialogLayout1 = getLayoutInflater().inflate(R.layout.activity_rating,null);
-                    rate1 = (ImageView) dialogLayout1.findViewById(R.id.rating1);
+                    rate1 = (ImageView)dialogLayout1.findViewById(R.id.rating1);
                     rate2 = (ImageView)dialogLayout1.findViewById(R.id.rating2);
                     rate3 = (ImageView)dialogLayout1.findViewById(R.id.rating3);
                     rate4 = (ImageView)dialogLayout1.findViewById(R.id.rating4);
@@ -504,79 +506,81 @@ public class UserMenu extends AppCompatActivity
                     rate1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            rate1.setColorFilter(R.color.chakra_clicked);
+                            rate1.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate1.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate2.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate2.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate3.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate3.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate4.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate4.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate5.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate5.setBackgroundColor(getResources().getColor(R.color.colorwhite));
                             submit.setVisibility(View.VISIBLE);
-                            clicked = true;
-                        }
-                    });
-                    rate1.setOnLongClickListener(new View.OnLongClickListener() {
-                        @Override
-                        public boolean onLongClick(View v) {
-                            rate2.setColorFilter(R.color.test);
-                            submit.setVisibility(View.GONE);
-                            return false;
                         }
                     });
                     rate2.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            rate1.setColorFilter(R.color.chakra_clicked);
-                            rate2.setColorFilter(R.color.chakra_clicked);
-
-
+                            rate1.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate1.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate2.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate2.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate3.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate3.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate4.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate4.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate5.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate5.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            submit.setVisibility(View.VISIBLE);
                         }
                     });
-                    rate2.setOnLongClickListener(new View.OnLongClickListener() {
-                        @Override
-                        public boolean onLongClick(View v) {
-                            rate3.setColorFilter(R.color.test);
-                            return false;
-                        }
-                    });
-
                     rate3.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            rate1.setColorFilter(R.color.chakra_clicked);
-                            rate2.setColorFilter(R.color.chakra_clicked);
-                            rate3.setColorFilter(R.color.chakra_clicked);
-
+                            rate1.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate1.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate2.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate2.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate3.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate3.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate4.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate4.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate5.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate5.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            submit.setVisibility(View.VISIBLE);
                         }
                     });
-                    rate3.setOnLongClickListener(new View.OnLongClickListener() {
-                        @Override
-                        public boolean onLongClick(View v) {
-                            rate4.setColorFilter(R.color.test);
-                            return false;
-                        }
-                    });
-
                     rate4.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            rate1.setColorFilter(R.color.chakra_clicked);
-                            rate2.setColorFilter(R.color.chakra_clicked);
-                            rate3.setColorFilter(R.color.chakra_clicked);
-                            rate4.setColorFilter(R.color.chakra_clicked);
-
-                        }
-                    });
-                    rate4.setOnLongClickListener(new View.OnLongClickListener() {
-                        @Override
-                        public boolean onLongClick(View v) {
-                            rate5.setColorFilter(R.color.test);
-                            return false;
+                            rate1.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate1.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate2.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate2.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate3.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate3.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate4.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate4.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate5.setColorFilter(getResources().getColor(R.color.textcolor));
+                            rate5.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            submit.setVisibility(View.VISIBLE);
                         }
                     });
                     rate5.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            rate1.setColorFilter(R.color.chakra_clicked);
-                            rate2.setColorFilter(R.color.chakra_clicked);
-                            rate3.setColorFilter(R.color.chakra_clicked);
-                            rate4.setColorFilter(R.color.chakra_clicked);
-                            rate5.setColorFilter(R.color.chakra_clicked);
-
+                            rate1.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate1.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate2.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate2.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate3.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate3.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate4.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate4.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            rate5.setColorFilter(getResources().getColor(R.color.colorMaroon));
+                            rate5.setBackgroundColor(getResources().getColor(R.color.colorwhite));
+                            submit.setVisibility(View.VISIBLE);
                         }
                     });
                     alertDialogBuilder1.setView(dialogLayout1);
