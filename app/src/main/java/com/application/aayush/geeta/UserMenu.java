@@ -358,7 +358,7 @@ public class UserMenu extends AppCompatActivity
             return false;
         }
         else if(date2.equals(date1)){
-            Toast.makeText(UserMenu.this,"Both date are equals",Toast.LENGTH_SHORT).show();
+            Toast.makeText(UserMenu.this,"One verse per day !",Toast.LENGTH_SHORT).show();
             return false;
 
         }
@@ -623,14 +623,14 @@ public class UserMenu extends AppCompatActivity
             intent.putExtra("user_address",uaddress);
             intent.putExtra("user_city",ucity);
 // Use TaskStackBuilder to build the back stack and get the PendingIntent
-            TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(UserMenu.this);
-            // add all of DetailsActivity's parents to the stack,
-            // followed by DetailsActivity itself
-
-            taskStackBuilder.addNextIntentWithParentStack(intent);
-            PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
-            builder.setContentIntent(pendingIntent);
+//            TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(UserMenu.this);
+//            // add all of DetailsActivity's parents to the stack,
+//            // followed by DetailsActivity itself
+//
+//            taskStackBuilder.addNextIntentWithParentStack(intent);
+//            PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
+//            NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+//            builder.setContentIntent(pendingIntent);
             startActivity(intent);
         }
         else if (id == R.id.nav_log_out) {

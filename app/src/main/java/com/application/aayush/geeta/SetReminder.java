@@ -4,6 +4,7 @@ package com.application.aayush.geeta;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -27,96 +28,71 @@ import java.util.Calendar;
  */
 /*public class SetReminder extends Fragment {*/
 public class SetReminder extends AppCompatActivity{
+    private static final int RQS_1 = 1;
     Button addReminder;
-    ImageButton back;
-    Toolbar toolbar;
-    Bundle bundle;
-    String name,mobile_number,email,address,city;
-    AlarmManager alarmManager;
-    PendingIntent pendingIntent;
+    TimePickerDialog timePickerDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_set_reminder);
-        bundle = new Bundle();
-        toolbar = (Toolbar)findViewById(R.id.my_toolbar);
-        name = getIntent().getStringExtra("user_name");
-        mobile_number = getIntent().getStringExtra("user_mobilenumber");
-        email = getIntent().getStringExtra("user_email");
-        address = getIntent().getStringExtra("user_address");
-        city = getIntent().getStringExtra("user_city");
-        back = (ImageButton) findViewById(R.id.button14);
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SetReminder.super.onBackPressed();
-            }
-        });
-        addReminder = (Button)findViewById(R.id.button8);
-        /*cancel = (Button)findViewById(R.id.button9);
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),UserMenu.class);
-                intent.putExtra("user_name",name);
-                intent.putExtra("user_mobilenumber",mobile_number);
-                intent.putExtra("user_email",email);
-                intent.putExtra("user_address",address);
-                intent.putExtra("user_city",city);
-                startActivity(intent);
-            }
-        });*/
+        addReminder = (Button) findViewById(R.id.button8);
         addReminder.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                final Calendar mcurrentTime = Calendar.getInstance();
-                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-                int minute = mcurrentTime.get(Calendar.MINUTE);
-                TimePickerDialog mTimePicker;
-                mTimePicker = new TimePickerDialog(SetReminder.this, new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                    //    eReminderTime.setText( selectedHour + ":" + selectedMinute);
-                   //     Toast.makeText(getApplicationContext(),hour+":"+minute,Toast.LENGTH_SHORT).show();
-                        bundle.putInt("hour",selectedHour);
-                        bundle.putInt("minute",selectedMinute);
-                        // create a frame layout
-                        FrameLayout fragmentLayout = new FrameLayout(getApplicationContext());
-                        // set the layout params to fill the activity
-                        fragmentLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-                        // set an id to the layout
-                          fragmentLayout.setId(R.id.addReminder); // some positive integer
-//                        fragmentLayout.setId(R.id.dynamic_layout);
-                        // set the layout as Activity content
-                        setContentView(fragmentLayout);
-                        // Finally , add the fragment
-                        AddReminder addReminder = new AddReminder();
-//                        DynamicallyAddReminder dynamicallyAddReminder = new DynamicallyAddReminder();
-                       addReminder.setArguments(bundle);
-//                        dynamicallyAddReminder.setArguments(bundle);
-/*
-                        alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
-                        Intent myIntent = new Intent(SetReminder.this, AlarmReceiver.class);
-                        pendingIntent = PendingIntent.getBroadcast(SetReminder.this, 0, myIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-                        //sets the alarm manager
-                        alarmManager.set(AlarmManager.RTC_WAKEUP,mcurrentTime.getTimeInMillis(),pendingIntent);
-*/
 
-                        FragmentManager fragmentManager = getSupportFragmentManager();
-
-                        fragmentManager.beginTransaction().add(R.id.addReminder,addReminder).commit();
-//                        fragmentManager.beginTransaction().add(R.id.dynamic_layout,dynamicallyAddReminder).commit();
-//                        fragmentManager.beginTransaction().replace(R.id.setReminder,addReminder,addReminder.getTag()).commit();
-
-                    }
-                }, hour, minute, true);//Yes 24 hour time
-                mTimePicker.setTitle("Select Time");
-                mTimePicker.show();
+                openTimePickerDialog(false);
 
             }
         });
 
     }
+
+    private void openTimePickerDialog(boolean is24r) {
+        Calendar calendar = Calendar.getInstance();
+        timePickerDialog = new TimePickerDialog(SetReminder.this, onTimeSetListener,
+                calendar.get(Calendar.HOUR_OF_DAY),
+                calendar.get(Calendar.MINUTE), is24r);
+        timePickerDialog.setTitle("Set Alarm");
+
+        timePickerDialog.show();
+
+    }
+
+    TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
+        @Override
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+
+            Calendar calNow = Calendar.getInstance();
+            Calendar calSet = (Calendar) calNow.clone();
+            calSet.set(Calendar.HOUR_OF_DAY, hourOfDay);
+            calSet.set(Calendar.MINUTE, minute);
+            calSet.set(Calendar.SECOND, 0);
+            calSet.set(Calendar.MILLISECOND, 0);
+
+            if (calSet.compareTo(calNow) <= 0) {
+
+                calSet.add(Calendar.DATE, 1);
+            }
+
+            setAlarm(calSet);
+        }
+    };
+
+    private void setAlarm(Calendar targetCal) {
+        Toast.makeText(SetReminder.this, "Alarm is set at " + targetCal.getTime(),
+                Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getBaseContext(), AlarmReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                getBaseContext(), RQS_1, intent, 0);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        alarmManager.setExact(AlarmManager.RTC_WAKEUP, targetCal.getTimeInMillis(),
+                pendingIntent);
+
+    }
+
 }
+
+
