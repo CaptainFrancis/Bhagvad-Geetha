@@ -658,12 +658,14 @@ public class UserMenu extends AppCompatActivity
 
 
         // Firebase sign out
+        LoginManager.getInstance().logOut();
         mAuth.signOut();
         // Google sign out
         Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback( new ResultCallback<Status>() {
             @Override public void onResult(@NonNull Status status) {
                 //put something you want to happen here eg.
                 startActivity(new Intent(UserMenu.this, SignUp.class)); } });
+                finish();
 
     }
 

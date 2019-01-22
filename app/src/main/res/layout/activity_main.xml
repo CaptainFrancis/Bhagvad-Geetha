@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,27 +11,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@mipmap/splash_screen"
     tools:context="com.application.aayush.geeta.MainActivity">
+
     <TextView
-        android:text="@string/first_textview"
+        android:id="@+id/text1"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:id="@+id/text1"
-        android:layout_marginTop="170sp"
-        android:layout_marginLeft="90sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/everyday_ngeetha"
+        android:textColor="#ffffff"
         android:textSize="35sp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif"
-        android:textColor="#ffffff" />
+        android:textStyle="italic"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:text="@string/second_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/text1"
-        android:layout_marginEnd="50dp"
-        android:id="@+id/textView27"
-        android:textSize="35sp"
-        android:textColor="@color/colorwhite" />
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
