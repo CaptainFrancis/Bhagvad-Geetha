@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorMaroon">#800000</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="colorblack">#000000</color>
+    <color name="colorgrey">#D3D3D3</color>
+    <color name="backgroundcolor">#eae9e8</color>
+    <color name="backgroundcolor1">#721d26</color>
+    <color name="textcolor">#808080</color>
+    <color name="textcolor1">#721d26</color>
+    <color name="brown">#542a0c</color>
+    <color name="chakra_clicked">#af630a</color>
+    <color name="svg_iconcolor">#ffffff</color>
+    <color name="test">#b5b9cc</color>
+    <color name="colorgreen">#7CFC00</color>
+    <color name="test1">#34af23</color>
+</resources>

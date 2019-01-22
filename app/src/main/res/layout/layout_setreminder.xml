@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button
+        android:text="Set Reminder"
+        android:layout_width="227dp"
+        android:id="@+id/button9"
+        android:layout_marginLeft="70sp"
+        android:background="@color/backgroundcolor1"
+        android:textColor="@color/colorwhite"
+        android:layout_marginBottom="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="63dp"
+        android:id="@+id/textView23"
+        android:textColor="@color/colorMaroon"/>
+
+    <Switch
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView23"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="36dp"
+        android:id="@+id/switch2" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView23"
+        android:layout_alignStart="@+id/button9"
+        android:layout_marginStart="29dp"
+        android:id="@+id/textView28" />
+
+    <CheckBox
+        android:text="Repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/checkBox"
+        android:textColor="@color/colorMaroon"/>
+
+    <Button
+        android:id ="@+id/day1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="S"
+        android:textColor="@color/textcolor"
+        android:background="@drawable/button_normal"
+        android:padding="1dp"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id ="@+id/day2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="M"
+        android:textColor="@color/textcolor"
+        android:background="@drawable/button_normal"
+        android:padding="1dp"
+        android:layout_alignBottom="@+id/day1"
+        android:layout_marginLeft="63dp" />
+
+    <Button
+        android:text="T"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/day3"
+        android:textColor="@color/textcolor1"
+        android:background="@drawable/button_normal"
+        android:layout_marginTop="111dp"
+        android:layout_alignBottom="@+id/day1"
+        android:layout_marginLeft="116dp" />
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="W"
+        android:id="@+id/day4"
+        android:textColor="@color/textcolor1"
+        android:background="@drawable/button_normal"
+        android:layout_marginTop="111dp"
+        android:layout_alignBottom="@+id/day1"
+        android:layout_marginLeft="169dp"/>
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="Th"
+        android:id="@+id/day5"
+        android:textColor="@color/textcolor1"
+        android:background="@drawable/button_normal"
+        android:layout_marginTop="111dp"
+        android:layout_alignBottom="@+id/day1"
+        android:layout_marginLeft="223dp"/>
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="F"
+        android:id="@+id/day6"
+        android:textColor="@color/textcolor1"
+        android:background="@drawable/button_normal"
+        android:layout_marginTop="111dp"
+        android:layout_alignBottom="@+id/day1"
+        android:layout_marginLeft="275dp"
+        />
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="Sa"
+        android:id="@+id/day7"
+        android:textColor="@color/textcolor1"
+        android:background="@drawable/button_normal"
+        android:layout_marginTop="111dp"
+        android:layout_alignBottom="@+id/day1"
+        android:layout_marginLeft="326dp"/>
+
+</RelativeLayout>

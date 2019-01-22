@@ -1,0 +1,252 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorwhite"
+    android:id="@+id/addReminder"
+    tools:context="com.application.aayush.geeta.AddReminder">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/backgroundcolor1"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/toobar_title"
+                android:text="Set Reminder"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/colorwhite"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="64dp"
+                />
+
+            <Button
+                android:viewportHeight="24.0"
+                android:viewportWidth="24.0"
+                android:layout_centerVertical="true"
+                android:id="@+id/button14"
+                android:background="@mipmap/back_arrow_white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_height="24dp"
+                android:layout_width="24dp"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:elevation="10dp"
+        android:layout_below="@+id/my_toolbar" />
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
+        <View
+            android:layout_height="1dp"
+            android:background="@color/colorgrey"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="348dp" />
+
+        <View
+            android:background="@color/colorgrey"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            android:id="@+id/view2" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView47"
+            android:textColor="@color/colorMaroon"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="24dp"
+            android:textStyle="normal|bold" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch3"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="300dp" />
+
+        <Spinner
+            android:layout_width="320dp"
+            android:id="@+id/spinner5"
+            android:layout_marginTop="56dp"
+            android:layout_marginLeft="16dp"
+            android:layout_height="38dp" />
+
+        <View
+            android:background="@color/colorgrey"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="353dp"
+            android:layout_width="1dp"
+            android:id="@+id/view3"
+            android:layout_height="100dp" />
+
+
+        <View
+            android:layout_height="1dp"
+            android:background="@color/colorgrey"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/view4"
+            android:layout_width="349dp" />
+
+        <CheckBox
+             android:text="Repeat"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/checkBox3"
+             android:layout_marginLeft="20dp"
+             android:layout_marginTop="80dp"
+             android:visibility="gone"
+             />
+        <Button
+            android:id ="@+id/day1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="S"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/button_normal"
+            android:padding="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="115dp"
+            android:visibility="gone"
+            />
+        <Button
+            android:id ="@+id/day2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="M"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/button_normal"
+            android:padding="1dp"
+            android:layout_alignBottom="@+id/day1"
+            android:layout_marginLeft="58dp"
+            android:layout_marginTop="115dp"
+            android:visibility="gone" />
+        <Button
+            android:text="T"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/day3"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/button_normal"
+            android:layout_marginTop="115dp"
+            android:layout_alignBottom="@+id/day1"
+            android:layout_marginLeft="108dp"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="W"
+            android:id="@+id/day4"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/button_normal"
+            android:layout_marginTop="115dp"
+            android:layout_alignBottom="@+id/day1"
+            android:layout_marginLeft="157dp"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="Th"
+            android:id="@+id/day5"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/button_normal"
+            android:layout_marginTop="115dp"
+            android:layout_alignBottom="@+id/day1"
+            android:layout_marginLeft="207dp"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="F"
+            android:id="@+id/day6"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/button_normal"
+            android:layout_marginTop="115dp"
+            android:layout_alignBottom="@+id/day1"
+            android:layout_marginLeft="256dp"
+            android:visibility="gone"
+            />
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="Sa"
+            android:id="@+id/day7"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/button_normal"
+            android:layout_marginTop="115dp"
+            android:layout_alignBottom="@+id/day1"
+            android:layout_marginLeft="306dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:text=""
+            android:id="@+id/button17"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="120dp"
+            android:background="@mipmap/bell"
+            android:fitsSystemWindows="false"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:text="Default ringtone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView49"
+            android:layout_marginTop="133dp"
+            android:layout_marginLeft="80dp"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:text="Vibrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox4"
+            android:layout_marginTop="133dp"
+            android:layout_marginLeft="250dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText3"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="160dp"
+            android:hint="Label"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "156971961872",
+    "firebase_url": "https://bhagvadgeetha-f3795.firebaseio.com",
+    "project_id": "bhagvadgeetha-f3795",
+    "storage_bucket": "bhagvadgeetha-f3795.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156971961872:android:2efe09eefd41d72d",
+        "android_client_info": {
+          "package_name": "com.application.aayush.geeta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156971961872-ie1dcof2jmevv20835irnqfgcjj91v12.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.application.aayush.geeta",
+            "certificate_hash": "e2d0de01b30e779ea58e8f33c5cb035721798d4f"
+          }
+        },
+        {
+          "client_id": "156971961872-vdiu1totm7ar49cnonjrr8bsvd5st8hv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKoTnkLCqPXb80-QxMuFdGlhOLLki83dU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156971961872-vdiu1totm7ar49cnonjrr8bsvd5st8hv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

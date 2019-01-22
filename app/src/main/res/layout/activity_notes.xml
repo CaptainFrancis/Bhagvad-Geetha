@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.application.aayush.geeta.UserNote"
+    android:id="@+id/notes"
+    android:background="@color/colorwhite">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/backgroundcolor1"
+        android:elevation="4dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toobar_title"
+                android:text="@string/diary_title"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/colorwhite"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/font3"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="64dp"/>
+
+            <ImageButton
+                android:id="@+id/button41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@mipmap/white_arrow_1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="17dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text=""
+        android:ems="10"
+        android:textStyle="normal"
+        android:layout_marginTop="69dp"
+        android:id="@+id/editText3"
+        android:background="@drawable/rounded_borderedittext"
+        android:minLines="2"
+        android:maxLines="3"
+        android:scrollbars="vertical"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignStart="@+id/button10"
+        android:layout_marginStart="23dp" />
+
+
+
+    <Button
+        android:text="@string/save"
+        android:layout_width="290dp"
+        android:layout_height="35dp"
+        android:id="@+id/button10"
+        android:layout_marginTop="27dp"
+        android:textColor="@color/colorwhite"
+        android:background="@color/backgroundcolor1"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

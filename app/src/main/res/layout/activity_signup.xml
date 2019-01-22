@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:background="@color/backgroundcolor1"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_height="50dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/toobar_title"
+        android:text="SignUp"
+        android:textColor="@color/colorwhite"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:gravity="fill_horizontal|center" />
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:addStatesFromChildren="false"
+
+
+        android:fillViewport="false"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            >
+            <TextView
+                android:text="Registration:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textSize="@dimen/header_size"
+                android:textColor="@color/colorblack"
+                android:layout_centerHorizontal="true"
+                 />
+            <View
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="57dp"
+                android:layout_width="40dp" />
+            <View
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="57dp"
+                android:layout_width="40dp" />
+        </RelativeLayout>
+
+   <!-- <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/button2"
+        android:background="@mipmap/google"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="30dp"
+        android:layout_width="160dp" />-->
+
+         <!--   <com.google.android.gms.common.SignInButton
+
+                android:id="@+id/button2"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:visibility="visible"
+
+                tools:visibility="gone" />-->
+
+                     <com.google.android.gms.common.SignInButton
+                         android:id="@+id/button2"
+                         android:text=""
+                         android:layout_width="160dp"
+                         android:layout_marginTop="30dp"
+                         android:layout_height="30dp"
+
+                         android:layout_gravity="center_horizontal"
+                         />
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                >
+                <View
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="130dp"
+                    android:layout_width="20dp" />
+    <ImageView
+        app:srcCompat="@mipmap/design"
+        android:id="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="false"
+        android:layout_width="24dp"
+        android:layout_height="24dp" />
+                <View
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="130dp"
+                    android:layout_width="20dp" />
+</RelativeLayout>
+    <com.facebook.login.widget.LoginButton
+        xmlns:fb="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/button4"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_height="30dp"
+        android:layout_width="160dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                >
+                <View
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="130dp"
+                    android:layout_width="20dp" />
+                <ImageView
+                    app:srcCompat="@mipmap/design"
+                    android:id="@+id/imageView5"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="false"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+                <View
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="130dp"
+                    android:layout_width="20dp" />
+            </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="20dp">
+
+        </RelativeLayout>
+
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="70dp"
+                android:text="I agree with the terms and conditions" />
+
+            <Button
+                android:text="Submit"
+                android:layout_height="35dp"
+                android:id="@+id/button7"
+                android:background="@color/backgroundcolor1"
+                android:textColor="@color/colorwhite"
+                android:layout_width="290dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="15dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

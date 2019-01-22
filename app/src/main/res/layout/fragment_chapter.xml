@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorwhite"
+    android:id="@+id/fragment_chapter"
+    tools:context="com.application.aayush.geeta.Chapter">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/backgroundcolor1"
+        android:elevation="4dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/toobar_title"
+                android:text="Chapter 1"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/colorwhite"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="64dp"
+                />
+
+            <Button
+                android:id="@+id/notification_button1"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/shell"
+                android:layout_alignParentEnd="true"
+                android:layout_width="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp" />
+            <ImageButton
+                android:id="@+id/button14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@mipmap/white_arrow_1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="17dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:text="Share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_alignParentRight="true"
+        android:id="@+id/textView38"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="16sp" />
+
+    <ImageView
+        app:srcCompat="@mipmap/share"
+        android:id="@+id/imageView12"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="end"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="55dp"
+        android:layout_width="37dp"
+        android:layout_height="37dp" />
+
+    <TextView
+        android:text="Chapter 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView30"
+        android:textSize="22sp"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/backgroundcolor1"
+        android:layout_marginBottom="25dp" />
+
+    <FrameLayout
+        android:id="@+id/chapter_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView30"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="75dp">
+
+        <EditText
+            android:text="Yada Yada Hi Dharmasya Glanirva Bhavathi Bharatha,Abhyuthanam Adharmaysya Tadatmanam Srijami Aham"
+            android:layout_width="377dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edittext39"
+            android:textSize="14sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="0dp" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chapter_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+        <Button
+            android:text="Cancel"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/colorblack"
+            android:id="@+id/button12"
+            android:background="@drawable/button"
+            android:layout_marginEnd="20dp"
+            />
+
+        <Button
+            android:text="Save"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginTop="0dp"
+            android:id="@+id/button13"
+            android:background="@color/backgroundcolor1"
+            android:textColor="@color/colorwhite" />
+</LinearLayout>
+
+
+
+
+</RelativeLayout>

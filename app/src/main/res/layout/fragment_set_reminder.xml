@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setReminder"
+    android:background="@color/backgroundcolor1"
+    tools:context="com.application.aayush.geeta.SetReminder">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/backgroundcolor1"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar_title"
+                android:text="Set Reminder"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/colorwhite"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/font3"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="64dp"/>
+
+            <ImageButton
+                android:id="@+id/button14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@mipmap/white_arrow_1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="17dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="200dp"
+            android:src="@mipmap/round_image"
+            android:id="@+id/imageView7"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="115dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="30dp"
+            android:text="Start your day by reading Bhagwad Geeta"
+            android:textColor="@color/colorwhite"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@mipmap/design"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:id="@+id/imageView2"
+            android:tint="@color/colorwhite"/>
+
+        <TextView
+            android:text="---------------------------"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView26"
+            android:textColor="@color/colorwhite"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="-24dp" />
+        <TextView
+            android:text="---------------------------"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView27"
+            android:textColor="@color/colorwhite"
+            android:layout_marginEnd="50dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-21dp" />
+
+    <Button
+        android:text="Start Reading Geeta"
+        android:layout_width="230dp"
+        android:id="@+id/button8"
+        android:background="@color/colorwhite"
+        android:textColor="@color/backgroundcolor1"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="normal"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:textAllCaps="false" />
+        <!--<Button
+            android:text="Cancel"
+            android:layout_width="230dp"
+            android:id="@+id/button9"
+            android:textColor="@color/colorwhite"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="35dp"
+            android:textStyle="normal"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textAllCaps="false" />-->
+    </LinearLayout>
+</RelativeLayout>

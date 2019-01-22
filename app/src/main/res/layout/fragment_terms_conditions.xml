@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.application.aayush.geeta.TermsConditionsFragment"
+    android:id="@+id/terms_conditions_layout"
+    android:background="@color/colorwhite">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/backgroundcolor1"
+        android:elevation="4dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="0dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toobar_title"
+            android:text="@string/text9"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorwhite"
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/font3"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="64dp"/>
+
+        <ImageButton
+            android:id="@+id/button41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@mipmap/white_arrow_1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="17dp"/>
+</RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView8"
+        android:addStatesFromChildren="false"
+        android:layout_marginTop="50dp"
+        android:fillViewport="false"
+        android:clipToPadding="false"
+        android:id="@+id/scrollView1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp">
+
+    <TextView
+        android:text="EveryDay Geeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView21"
+        android:textStyle="normal"
+        android:textSize="22sp"
+        android:textColor="@color/colorblack"
+        android:layout_marginStart="13dp"
+        android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView22"
+            android:layout_marginEnd="13dp"
+            android:lineSpacingExtra="2dp"
+            android:layout_below="@+id/textView21"
+            android:layout_alignStart="@+id/textView21"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+        android:text="EveryDay Geeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView19"
+        android:textStyle="normal"
+        android:textSize="22sp"
+        android:textColor="@color/colorblack"
+        android:layout_below="@+id/textView22"
+        android:layout_alignStart="@+id/textView22" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView19"
+        android:layout_alignStart="@+id/textView19"
+        android:layout_marginTop="25dp"
+        android:layout_alignEnd="@+id/textView22"
+        android:lineSpacingExtra="2dp"
+        android:id="@+id/textView33" />
+
+        <Button
+            android:text="Ok"
+            android:layout_width="290dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/button10"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/textView33"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorwhite"
+            android:background="@color/backgroundcolor1" />
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

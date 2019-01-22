@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorwhite">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="366dp"
+        android:orientation="horizontal"
+        android:background="@color/backgroundcolor"
+        android:id="@+id/layout1">
+        <ImageView
+            android:layout_width="match_parent"
+            app:srcCompat="@mipmap/intro_assets"
+            android:id="@+id/imageView6"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="50dp"
+            android:paddingBottom="30dp" />
+        </LinearLayout>
+        <TextView
+                android:text="Heading 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_above="@+id/textView16"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="25dp"
+                android:textColor="@color/colorblack"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/font1"
+                 />
+
+         <TextView
+                android:text="As a person puts on new garments, giving up old ones, similarly, the soul accepts new material bodies, giving up the old and useless ones."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/textView24"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:gravity="center_vertical|center"
+                android:layout_marginBottom="55dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                android:id="@+id/textView16"
+                android:textSize="@dimen/font2" />
+
+            <TextView
+                android:text="Skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24"
+                android:textSize="@dimen/font3"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+            />
+</RelativeLayout>

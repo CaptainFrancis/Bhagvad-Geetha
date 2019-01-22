@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setRingtone"
+    tools:context="com.application.aayush.geeta.SetReminder">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/backgroundcolor1"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/toobar_title"
+                android:text="@string/text12"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/colorwhite"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="64dp"
+                />
+            <Button
+                android:viewportHeight="24.0"
+                android:viewportWidth="24.0"
+                android:layout_centerVertical="true"
+                android:id="@+id/button14"
+                android:background="@mipmap/back_arrow_white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_height="24dp"
+                android:layout_width="24dp"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+</android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:text="@string/text13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:textSize="@dimen/font2"
+        android:id="@+id/textView2" />
+
+    <ListView
+        android:id="@+id/ringtone_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
+
+</RelativeLayout>

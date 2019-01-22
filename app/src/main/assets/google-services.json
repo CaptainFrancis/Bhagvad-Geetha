@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "554591713885",
+    "project_id": "geeta-59e61"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554591713885:android:2efe09eefd41d72d",
+        "android_client_info": {
+          "package_name": "com.application.aayush.geeta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554591713885-9guakhcl03anbm67bb4bmccp6d7bv7bc.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "554591713885-06c7tr9o9biqreolp5l6s5obck8enagc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.application.aayush.geeta",
+            "certificate_hash": "94fe0564e5a62459976cc46761bbfb22e0a2a0c9"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnigb5vYHFVkLwStzxX5FVs8-3moB7aSE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

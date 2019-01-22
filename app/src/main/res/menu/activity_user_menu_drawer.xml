@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_diary"
+            android:icon="@mipmap/diary"
+            android:title="@string/text4" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@mipmap/settings"
+            android:title="@string/text5" />
+        <item
+            android:id="@+id/nav_userguide"
+            android:icon="@mipmap/app_guide"
+            android:title="@string/text6" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@mipmap/share_it"
+            android:title="@string/text7" />
+        <item
+            android:id="@+id/nav_rate"
+            android:icon="@mipmap/rate_us"
+            android:title="@string/text8" />
+        <item
+            android:id="@+id/nav_terms"
+            android:icon="@mipmap/t_c"
+            android:title="@string/text9" />
+        <item
+            android:id="@+id/nav_reminder"
+            android:icon="@mipmap/reminder"
+            android:title="@string/text10" />
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@mipmap/logout"
+            android:title="@string/text11" />
+    </group>
+
+
+</menu>

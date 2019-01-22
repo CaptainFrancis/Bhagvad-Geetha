@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            >
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView47"
+                android:textColor="@color/colorMaroon"
+                android:textSize="20sp"
+                android:layout_marginTop="25dp"
+                android:textStyle="normal|bold" />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_alignBaseline="@+id/textView47"/>
+            <CheckBox
+                android:text="Repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox3"
+                android:layout_below="@+id/textView47"
+                android:layout_marginTop="20dp"
+                android:visibility="visible" />
+            <Button
+                android:id ="@+id/day1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="S"
+                android:textColor="@color/textcolor"
+                android:background="@drawable/button_normal"
+                android:layout_below="@+id/textView47"
+                android:padding="1dp"
+                android:layout_marginTop="64dp"
+                android:layout_alignStart="@+id/checkBox3"
+                android:layout_marginEnd="14dp"
+                android:visibility="gone"
+                />
+            <Button
+                android:id ="@+id/day2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="M"
+                android:textColor="@color/textcolor"
+                android:background="@drawable/button_normal"
+                android:layout_marginEnd="14dp"
+                android:layout_alignTop="@+id/day1"
+                android:layout_toEndOf="@+id/day1"
+                android:visibility="gone" />
+            <Button
+                android:id ="@+id/day3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="T"
+                android:layout_marginEnd="14dp"
+                android:textColor="@color/textcolor"
+                android:background="@drawable/button_normal"
+                android:layout_alignTop="@+id/day1"
+                android:layout_toEndOf="@+id/day2"
+                android:visibility="gone" />
+            <Button
+                android:id ="@+id/day4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="W"
+                android:textColor="@color/textcolor"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/button_normal"
+                android:layout_alignTop="@+id/day1"
+                android:layout_toEndOf="@+id/day3"
+                android:visibility="gone" />
+            <Button
+                android:id ="@+id/day5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="T"
+                android:textColor="@color/textcolor"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/button_normal"
+                android:layout_alignTop="@+id/day1"
+                android:layout_toEndOf="@+id/day4"
+                android:visibility="gone" />
+            <Button
+                android:id ="@+id/day6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="F"
+                android:textColor="@color/textcolor"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/button_normal"
+                android:layout_alignTop="@+id/day1"
+                android:layout_toEndOf="@+id/day5"
+                android:visibility="gone" />
+            <Button
+                android:id ="@+id/day7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="S"
+                android:textColor="@color/textcolor"
+                android:background="@drawable/button_normal"
+                android:layout_alignTop="@+id/day1"
+                android:layout_toEndOf="@+id/day6"
+                android:visibility="gone" />
+
+            <Button
+                android:text=""
+                android:id="@+id/button17"
+                android:layout_below="@+id/textView47"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="15dp"
+                android:background="@mipmap/bell"
+                android:fitsSystemWindows="false"
+                android:layout_marginStart="4dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:text="Default ringtone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView49"
+                android:textSize="@dimen/font2"
+                android:visibility="visible"
+                android:layout_alignBaseline="@+id/button17"
+                android:layout_alignBottom="@+id/button17"
+                android:layout_toEndOf="@+id/button17" />
+            <CheckBox
+                android:text="Vibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox4"
+                android:textColor="@color/textcolor"
+                android:layout_below="@+id/textView47"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_alignBaseline="@+id/button17"
+                android:layout_alignEnd="@+id/switch3"
+                android:visibility="visible" />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView47"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginTop="94dp">
+
+                <EditText
+                    android:id="@+id/input_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="Label"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:text=""
+                android:id="@+id/button18"
+                android:background="@mipmap/delete"
+                android:fitsSystemWindows="false"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="visible"
+                android:layout_marginTop="158dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/textView47"
+                android:layout_alignStart="@+id/button17" />
+            <Button
+                android:text=""
+                android:id="@+id/button19"
+                android:background="@mipmap/up_arrow"
+                android:layout_below="@+id/textView47"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                android:clickable="true"
+                android:layout_marginTop="157dp"
+                android:fitsSystemWindows="false"
+                android:layout_height="20dp"
+                android:layout_width="20dp" />
+            <Button
+                android:text=""
+                android:clickable="true"
+                android:id="@+id/hidden_button19"
+                android:background="@mipmap/down_arrow"
+                android:layout_below="@+id/textView47"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="157dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:fitsSystemWindows="false" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

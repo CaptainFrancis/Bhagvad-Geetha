@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.application.aayush.geeta.UserMenu">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="@color/backgroundcolor1"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:layout_height="50dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/toobar_title"
+                    android:text="EveryDay Geeta"
+                    android:gravity="center"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="@dimen/font3"
+                    android:layout_marginStart="55dp"
+                    android:paddingTop="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+                <Button
+                    android:id="@+id/notification_button2"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/shell"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_user_menu" />
+
+</android.support.design.widget.CoordinatorLayout>
